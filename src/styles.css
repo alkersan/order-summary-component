@@ -1,0 +1,97 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* GLOBAL STYLES */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-family: 'Red Hat Display', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+#root {
+    /*
+      Create a stacking context, without a z-index.
+      This ensures that all portal content (modals and tooltips) will
+      float above the app.
+    */
+    isolation: isolate;
+
+    --color-white: hsl(0deg 100% 100%);
+    --color-primary-pale: hsl(225deg 100% 94%);
+    --color-primary-bright: hsl(245deg 75% 52%);
+    --color-primary-bright-a20: hsl(from var(--color-primary-bright) h s l / 0.2);
+
+    --color-neutral-pale: hsl(225deg 100% 98%);
+    --color-neutral-light: hsl(224deg 23% 55%);
+    --color-neutral-dark: hsl(223deg 46% 23%);
+
+    --color-active: hsl(245deg 83% 68%);
+    --color-shadow: hsl(228deg 87% 39% / 0.2);
+
+    --font-regular: 500;
+    --font-bold: 700;
+    --font-black: 900;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: fallback;
+    src: url("/fonts/red_hat_display.woff2") format("woff2");
+}
